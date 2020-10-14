@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cityTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="263dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="48dp"
+        android:text="Enter a city followed by a country or use device location"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cityTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/LocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:clickable="true"
+        android:onClick="weatherFromDeviceLocation"
+        app:backgroundTint="#B8C6BC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityTextField"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <ImageButton
+        android:id="@+id/cityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:onClick="weatherFromName"
+        app:layout_constraintBottom_toBottomOf="@+id/cityTextField"
+        app:layout_constraintStart_toEndOf="@+id/cityTextField"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
